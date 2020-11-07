@@ -1,0 +1,148 @@
+import React from "react";
+import styled from "styled-components";
+import Navigation from "../components/navigation.component";
+import { Title, Header } from "../styles";
+
+
+const Portfolio = () => {
+  return (
+    <Wrapper>
+      <Navigation />
+      <Header>
+      	<Title>From my work</Title>
+      </Header>
+      <Holder>
+        <Top>
+          <Item>
+            <Name>eshop-project</Name>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://eshop-project-live.herokuapp.com/"
+            >
+              <Image>
+                <img src="./assets/icon2.jpg" alt="" />
+              </Image>
+              <HyperText>Link to hosted version</HyperText>
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/GarrettGrim111/eshop-project.git"
+            >
+              <HyperText>Link to Git version</HyperText>
+            </a>
+          </Item>
+        </Top>
+        <Bottom>
+          <Item>
+            <Name>Quest Log</Name>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://quest-journal.herokuapp.com/"
+            >
+              <Image>Mni Picture + Link to hosted version</Image>
+              <HyperText>Link to hosted version</HyperText>
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/GarrettGrim111/Quest-Log.git"
+            >
+              <HyperText>Link to Git version</HyperText>
+            </a>
+          </Item>
+          <Item>
+            <Name>Builds of Skyrim</Name>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://builds-of-skyrim.herokuapp.com/"
+            >
+              <Image>
+                <img src="./assets/icon1.jpg" alt="" />
+              </Image>
+              <HyperText>Link to hosted version</HyperText>
+            </a>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/GarrettGrim111/builds.git"
+            >
+              <HyperText>Link to Git version</HyperText>
+            </a>
+          </Item>
+        </Bottom>
+      </Holder>
+    </Wrapper>
+  );
+};
+
+const Wrapper = styled.div`
+  /* @media (max-width: 800px) {
+    padding: 10px;
+  } */
+`;
+const Holder = styled.div`
+  a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+  }
+`;
+
+const Name = styled.span`
+  margin: 10px 0;
+  font-weight: bold;
+`;
+
+const Item = styled.div`
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+`;
+
+const Top = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+const Bottom = styled.div`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const Image = styled.div`
+  img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 1px solid silver;
+    padding: 5px;
+    
+  }
+
+  img:hover {
+    box-shadow: 0 0 4px 2px rgba(0, 140, 186, 0.5);
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+ 
+`;
+const HyperText = styled.span`
+  font-size: 18px;
+  color: black;
+ 
+  padding: 5px;
+  cursor: pointer;
+`;
+
+export default Portfolio;
