@@ -25,5 +25,3 @@ export const Header = styled.div`
   padding: 15px;
   display: flex;
 `;
-
-

@@ -2,7 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { Title } from "./../styles";
+import { CgArrowDownO } from "react-icons/cg";
+
+import { Title, SubTitle } from "./../styles";
 
 const LandingPage = () => {
   return (
@@ -11,7 +13,7 @@ const LandingPage = () => {
         <NameBox>
           <h1>Garrett Grim</h1>
           <h4>Front end Developer</h4>
-          <Link to="/contact" className="contact">
+          <Link to="/contact" className="hyperlink">
             Contact me
           </Link>
         </NameBox>
@@ -21,9 +23,15 @@ const LandingPage = () => {
         {/* </Holder> */}
       </Header>
 
-      <Container>
+      <Bottom>
+        <Holder>
+          <Link to="/portfolio" className="link">
+            <Title>My work</Title>
+            <CgArrowDownO size="40px" color="#696969" />
+          </Link>
+        </Holder>
         <ProfileHolder>
-          <Title>About me</Title>
+          <SubTitle>About me</SubTitle>
           <Profile>
             My motto is "Play with the cards that life gives you" I don't
             consider myself an "adventurer" even though I was situated mostly
@@ -34,13 +42,32 @@ const LandingPage = () => {
             have completed a number of courses and projects in this sector. I am
             adaptable to the conditions and work with others.
           </Profile>
+          <Link to="/cv" className="hyperlink">
+            More
+          </Link>
         </ProfileHolder>
-      </Container>
+      </Bottom>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  .hyperlink {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    background: linear-gradient(
+      90deg,
+      rgba(28, 28, 28, 1) 0%,
+      rgba(105, 105, 105, 1) 50%,
+      rgba(28, 28, 28, 1) 100%
+    );
+    padding: 15px;
+    margin: 20px 0;
+    width: 150px;
+    text-align: center;
+  }
+`;
 const Header = styled.div`
   width: 100%;
   height: 400px;
@@ -50,7 +77,16 @@ const Header = styled.div`
   align-items: center;
 `;
 
-// const Holder = styled.div``;
+const Holder = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 50%;
+
+  .link
+ { text-decoration-color: #696969;}
+`;
 
 const HeaderImage = styled.img`
   width: 50%;
@@ -64,22 +100,15 @@ const NameBox = styled.div`
   margin: 20px;
   display: flex;
   flex-direction: column;
-  .contact {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
-    background-color: #696969;
-    padding: 15px;
-    margin: 20px 0;
-    
-  }
+  justify-content: center;
+  align-items: center;
 `;
 
-const Container = styled.div`
+const Bottom = styled.div`
   width: 100%;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  justify-content: space-between;
+
   /* text-align: center; */
 `;
 

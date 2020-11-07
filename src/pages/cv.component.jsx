@@ -1,22 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import Navigation from "./../components/navigation.component";
-// import {
-//   FaQuoteRight,
-//   FaGraduationCap,
-//   FaLanguage,
-//   FaTools,
-//   FaGamepad,
-// } from "react-icons/fa";
+import {
+ 
+  FaGraduationCap,
+  FaLanguage,
+  FaTools,
+  FaGamepad,
+} from "react-icons/fa";
 
 import { Header, Title, SubTitle, Bold } from "../styles";
 
 const CVPage = () => {
-  // const [visible, setVisible] = useState(false);
-
-  // const handlClicked = () => {
-  //   setVisible({ visible: !visible });
-  // };
+  
 
   return (
     <Wrapper>
@@ -26,13 +22,11 @@ const CVPage = () => {
 
       <Navigation />
 
-      {/* <Container> */}
-
       <UpperHolder>
         <Education>
           <SubTitle>
             Education Background
-            {/* <FaGraduationCap /> */}
+            <FaGraduationCap />
           </SubTitle>
           <Bold>
             2016-2020 Internationally Hospitality Management at UCN, AALBORG
@@ -48,12 +42,12 @@ const CVPage = () => {
           Graduation from the economy, bookkeeping and computer science with a
           focus on graphics software.
         </Education>
-        {/* </Holders> */}
+        
 
         <Languages>
           <SubTitle>
             Language Skills
-            {/* <FaLanguage /> */}
+            <FaLanguage />
           </SubTitle>
           <Bold>Czech</Bold>– Native proficiency <br />
           <Bold>Spanish</Bold>- Elementary proficiency (Diploma of knowledge of
@@ -70,7 +64,7 @@ const CVPage = () => {
         <Tools>
           <SubTitle>
             Tools
-            {/* <FaTools /> */}
+            <FaTools />
           </SubTitle>
           Microsoft Office, <br /> WWW, HTML+CSS <br /> Sass <br /> JavaScript,
           React, React Hooks <br />
@@ -85,7 +79,7 @@ const CVPage = () => {
           {" "}
           <SubTitle>
             Interests
-            {/* <FaGamepad /> */}
+            <FaGamepad />
           </SubTitle>
           I am an active individual, I like fitness, running, meditation. <br />
           Books, anime, science fiction and fantasy movies, if I have time, I
