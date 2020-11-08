@@ -25,11 +25,16 @@ const Contact = () => {
 };
 
 const Wrapper = styled.div`
-  height: 100vh;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
 `;
 
 const Holder2 = styled.div`
-  height: 100%;
+  position: absolute;
+  top: 60px;
+  bottom: 2.5rem;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

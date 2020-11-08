@@ -9,12 +9,13 @@ export const GlobalStyle = createGlobalStyle`
 
 }
 
+html { height: 100%; width: 100%;}
 
-
-html, body {
+body {
   position: relative;
-  min-height: 100vh;
-  padding-bottom: 2.5rem;
+  width: 100%;
+ height: 100%;
+  
     /* display: flex;
     justify-content: center;
   align-items: center;

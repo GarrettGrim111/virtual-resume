@@ -31,9 +31,9 @@ const LandingPage = () => {
           </Link>
         </Holder>
         <ProfileHolder>
-          <SubTitle>About me</SubTitle>
+          <SubTitle className="sub">About me</SubTitle>
           <Profile>
-            My motto is "Play with the cards that life gives you" I don't
+            My motto is "Play with the cards that life gives you" <br />I don't
             consider myself an "adventurer" even though I was situated mostly
             abroad. I lived and worked in England, Scotland, for a while in
             Spain, but mainly in Denmark. I have worked with colleagues of
@@ -70,7 +70,7 @@ const Wrapper = styled.div`
 `;
 const Header = styled.div`
   width: 100%;
-  height: 400px;
+  height: 350px;
   background-color: #1c1c1c;
   display: flex;
   justify-content: space-between;
@@ -84,13 +84,18 @@ const Holder = styled.div`
   text-align: center;
   width: 50%;
 
-  .link
- { text-decoration-color: #696969;}
+  .link {
+    text-decoration-color: #696969;
+  }
+
+/* @media (max-width: 800px) {
+} */
+
 `;
 
 const HeaderImage = styled.img`
-  width: 50%;
-  height: inherit;
+  width: 45%;
+  /* height: inherit; */
   object-fit: cover;
 `;
 
@@ -109,6 +114,9 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
 
+  .sub {
+    margin-top: 80px;
+  }
   /* text-align: center; */
 `;
 

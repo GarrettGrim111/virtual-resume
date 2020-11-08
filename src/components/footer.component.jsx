@@ -17,11 +17,17 @@ const FooterHolder = styled.div`
   background-color: #1c1c1c;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+
+  /* @media (max-width: 800px) {
+    position: absolute;
+    bottom: 0;
+  }  */
 `;
 const Copyright = styled.span`
   color: #696969;
   font-size: 12px;
-  padding: 15px;
+  margin: 0 10px;
 `;
 
 export default Footer;

@@ -19,9 +19,16 @@ const Navigation = () => {
 };
 
 const Holder = styled.div`
-  position: fixed;
+  position: absolute;
   top: 20px;
   right: 20px;
+
+  @media (max-width: 800px) {
+    position: absolute;
+    top: 80px;
+    left: 20px;
+    z-index: 5;
+  }
 `;
 
 const NavItem = styled.span`
