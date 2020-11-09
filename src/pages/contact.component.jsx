@@ -16,7 +16,10 @@ const Contact = () => {
           <Info>
             Nationality: Czech <br />
             Telephone: +420 730625 755 <br />
-            Email: garrett.grim111@gmail.com
+            Email:{" "}
+            <a href="mailto:garrett.grim111@gmail.com">
+              garrett.grim111@gmail.com
+            </a>
           </Info>
         </Holder>
       </Holder2>
