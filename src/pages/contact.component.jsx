@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Navigation from "./../components/navigation.component";
-import { Title, Header } from "../styles";
+import { Title, Header, Wrapper } from "../styles";
 
 const Contact = () => {
   return (
@@ -24,14 +24,14 @@ const Contact = () => {
   );
 };
 
-const Wrapper = styled.div`
-  display: flex;
-  flex-flow: column;
-  min-height: 100vh;
-  width: 100%;
-  margin: 0 auto;
-  flex-direction: row;
-`;
+// const Wrapper = styled.div`
+//   display: flex;
+//   flex-flow: column;
+//   min-height: 100vh;
+//   width: 100%;
+//   margin: 0 auto;
+//   flex-direction: row;
+// `;
 
 const Holder2 = styled.div`
   position: absolute;
@@ -47,6 +47,8 @@ const Holder = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  
   @media (max-width: 500px) {
     display: unset;
   }
@@ -56,6 +58,7 @@ const Image = styled.img`
   height: auto;
   margin: 0 15px;
   object-fit: cover;
+ 
 `;
 const Info = styled.p`
   line-height: 1.75;

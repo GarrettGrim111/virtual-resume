@@ -25,10 +25,12 @@ const LandingPage = () => {
 
       <Bottom>
         <Holder>
-          <Link to="/portfolio" className="link">
-            <Title>My work</Title>
-            <CgArrowDownO size="40px" color="#696969" />
-          </Link>
+          <LinkContainer>
+            <Link to="/portfolio" className="link">
+              <Title>My work</Title>
+              <CgArrowDownO size="40px" color="#696969" />
+            </Link>
+          </LinkContainer>
         </Holder>
         <ProfileHolder>
           <SubTitle className="sub">About me</SubTitle>
@@ -52,6 +54,23 @@ const LandingPage = () => {
 };
 
 const Wrapper = styled.div`
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  position: relative;
+  background-color: lightgray;
+
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  /*
+  //tablet styles
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  } */
+
   .hyperlink {
     text-decoration: none;
     color: white;
@@ -77,13 +96,31 @@ const Header = styled.div`
   align-items: center;
 `;
 
+const Bottom = styled.div`
+  display: flex;
+  /* flex-wrap: wrap; */
+  @media (max-width: 900px) {
+    display: block;
+  }
+`;
+
 const Holder = styled.div`
+  width: 50%;
+  min-height: 335px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 900px) {
+    min-height: 150px;
+  }
+`;
+
+const LinkContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  width: 50%;
-  /* background-color: lightgray; */
 
   .link {
     text-decoration-color: #696969;
@@ -92,8 +129,10 @@ const Holder = styled.div`
 
 const HeaderImage = styled.img`
   width: 50%;
-  height: inherit;
+  height: 150%;
   object-fit: cover;
+  -webkit-box-shadow: 0px 12px 15px 12px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 12px 15px 12px rgba(0, 0, 0, 0.48);
 `;
 
 const NameBox = styled.div`
@@ -106,35 +145,50 @@ const NameBox = styled.div`
   align-items: center;
 `;
 
-const Bottom = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-
-  .sub {
-    margin-top: 80px;
-  }
-
-  @media (max-width: 850px) {
-    flex-direction: column-reverse;
-  }
-
-  /* text-align: center; */
-`;
-
 const ProfileHolder = styled.div`
-  width: 50%;
-  height: 300px;
+  position: absolute;
+  right: 15px;
+  bottom: 50px;
+  width: 55%;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: white;
+  -webkit-box-shadow: 0px 12px 15px 12px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 12px 15px 12px rgba(0, 0, 0, 0.48);
+
+  .sub {
+    margin: 10px;
+  }
+
+  @media (max-width: 1100px) {
+    .sub {
+      margin-top: 20px;
+    }
+    .hyperlink {
+      margin: 10px 0;
+    }
+  }
+
+  @media (max-width: 900px) {
+    position: unset;
+    height: auto;
+    margin: 20px 0;
+    width: auto;
+
+    .sub {
+      margin: 20px;
+    }
+  }
 `;
 
 const Profile = styled.div`
   color: #696969;
   font-size: 14px;
+  margin: 0 20px;
+  padding: 0 10px;
 `;
 
 export default LandingPage;
