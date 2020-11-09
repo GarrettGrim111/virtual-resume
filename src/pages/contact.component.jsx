@@ -48,7 +48,6 @@ const Holder = styled.div`
   justify-content: center;
   align-items: center;
 
-  
   @media (max-width: 500px) {
     display: unset;
   }
@@ -58,7 +57,8 @@ const Image = styled.img`
   height: auto;
   margin: 0 15px;
   object-fit: cover;
- 
+  -webkit-box-shadow: 0px 2px 20px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 20px 12px rgba(0, 0, 0, 0.3);
 `;
 const Info = styled.p`
   line-height: 1.75;

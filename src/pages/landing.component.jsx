@@ -54,6 +54,8 @@ const LandingPage = () => {
 };
 
 const Wrapper = styled.div`
+display: flex;
+flex-direction: column;
   min-height: 100vh;
   width: 100%;
   margin: 0 auto;
@@ -180,6 +182,9 @@ const ProfileHolder = styled.div`
 
     .sub {
       margin: 20px;
+    }
+    .hyperlink {
+    margin-bottom: 30px;
     }
   }
 `;
