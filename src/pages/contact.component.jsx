@@ -27,7 +27,10 @@ const Contact = () => {
 const Wrapper = styled.div`
   display: flex;
   flex-flow: column;
-  height: 100%;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  flex-direction: row;
 `;
 
 const Holder2 = styled.div`
@@ -38,11 +41,15 @@ const Holder2 = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 `;
 const Holder = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (max-width: 500px) {
+    display: unset;
+  }
 `;
 const Image = styled.img`
   width: 200px;

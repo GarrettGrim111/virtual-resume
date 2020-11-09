@@ -1,5 +1,23 @@
 import styled from "styled-components";
 
+
+export const Wrapper = styled.div`
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  position: relative;
+
+  flex-direction: row;
+
+  //tablet styles
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
+`;
+
+
 export const Title = styled.div`
   font-size: 40px;
   font-weight: bold;
@@ -24,4 +42,5 @@ export const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
 `;

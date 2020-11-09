@@ -8,7 +8,7 @@ import {
   FaGamepad,
 } from "react-icons/fa";
 
-import { Header, Title, SubTitle, Bold } from "../styles";
+import { Wrapper, Header, Title, SubTitle, Bold } from "../styles";
 
 const CVPage = () => {
   return (
@@ -92,18 +92,24 @@ const CVPage = () => {
   );
 };
 
-const Wrapper = styled.div`
-  /* display: flex;
-  flex-flow: column;
-  height: 100%;
-  flex-wrap: wrap; */
-`;
+// const Wrapper = styled.div`
+//   /* display: flex;
+//   flex-flow: column;
+//   height: 100%;
+//   flex-wrap: wrap; */
+// `;
 
 const Holder = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 50px;
+
+  @media (max-width: 800px) {
+    display: unset;
+    margin-top: 90px;
+  }
 `;
 
 const UpperHolder = styled.div`
@@ -117,7 +123,7 @@ const LowerHolder = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 30px 0;
+  
 `;
 
 const Education = styled.div`
@@ -130,7 +136,7 @@ const Education = styled.div`
   @media (max-width: 800px) {
     flex: 100%;
     max-width: 600px;
-    margin-top: 50px;
+   
   }
 `;
 
@@ -144,7 +150,7 @@ const Languages = styled.div`
   @media (max-width: 800px) {
     flex: 100%;
     max-width: 600px;
-    margin-top: 50px;
+   
   }
 `;
 const Tools = styled.div`
@@ -157,7 +163,7 @@ const Tools = styled.div`
   @media (max-width: 800px) {
     flex: 100%;
     max-width: 600px;
-    margin-top: 50px;
+   
   }
 `;
 
@@ -171,7 +177,7 @@ const Interests = styled.div`
   @media (max-width: 800px) {
     flex: 100%;
     max-width: 600px;
-    margin-top: 50px;
+   
   }
 `;
 

@@ -4,6 +4,7 @@ export const GlobalStyle = createGlobalStyle`
 *{
     margin: 0;
     padding: 0;
+    border: 0;
     box-sizing: border-box;
     font-family: "Verdana", Geneva, Tahoma, sans-serif;
 
@@ -13,8 +14,8 @@ html { height: 100%; width: 100%;}
 
 body {
   position: relative;
-  width: 100%;
- height: 100%;
+  min-height: 100vh; 
+
   
     /* display: flex;
     justify-content: center;

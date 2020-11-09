@@ -1,15 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import Navigation from "../components/navigation.component";
-import { Title, Header } from "../styles";
-
+import { Title, Header, Wrapper } from "../styles";
 
 const Portfolio = () => {
   return (
     <Wrapper>
       <Navigation />
       <Header>
-      	<Title>From my work</Title>
+        <Title>From my work</Title>
       </Header>
       <Holder>
         <Top>
@@ -79,12 +78,18 @@ const Portfolio = () => {
   );
 };
 
-const Wrapper = styled.div`
-  /* @media (max-width: 800px) {
-    padding: 10px;
-  } */
-`;
+// const Wrapper = styled.div`
+
+// `;
 const Holder = styled.div`
+ width: 100%;
+  margin-top: 50px;
+
+  @media (max-width: 800px) {
+    
+    margin-top: 90px;
+  }
+
   a {
     display: flex;
     justify-content: center;
@@ -108,13 +113,18 @@ const Item = styled.div`
 `;
 
 const Top = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 `;
 const Bottom = styled.div`
+
   display: flex;
   justify-content: space-around;
+
+
+  @media (max-width: 750px) {
+    display: unset;
+    min-height: 100%;
+  }
 `;
 
 const Image = styled.div`
@@ -124,7 +134,6 @@ const Image = styled.div`
     object-fit: cover;
     border: 1px solid silver;
     padding: 5px;
-    
   }
 
   img:hover {
@@ -135,12 +144,11 @@ const Image = styled.div`
   justify-content: center;
   align-items: center;
   cursor: pointer;
- 
 `;
 const HyperText = styled.span`
   font-size: 18px;
   color: black;
- 
+
   padding: 5px;
   cursor: pointer;
 `;

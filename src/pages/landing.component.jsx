@@ -83,19 +83,16 @@ const Holder = styled.div`
   align-items: center;
   text-align: center;
   width: 50%;
+  /* background-color: lightgray; */
 
   .link {
     text-decoration-color: #696969;
   }
-
-/* @media (max-width: 800px) {
-} */
-
 `;
 
 const HeaderImage = styled.img`
-  width: 45%;
-  /* height: inherit; */
+  width: 50%;
+  height: inherit;
   object-fit: cover;
 `;
 
@@ -113,10 +110,16 @@ const Bottom = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   .sub {
     margin-top: 80px;
   }
+
+  @media (max-width: 850px) {
+    flex-direction: column-reverse;
+  }
+
   /* text-align: center; */
 `;
 
