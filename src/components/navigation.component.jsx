@@ -43,14 +43,8 @@ const StyledLink = styled(NavLink)`
   background-color: #696969;
   margin: 10px;
   padding: 5px;
-  /* border-style: solid;
-  border-width: 2px;
-  border-color: greenyellow; */
 
   &.active {
-    /* border-style: solid;
-    border-width: 2px;
-    border-color: red; */
     box-shadow: 0 0 4px 2px rgba(0, 140, 186, 0.5);
   }
 `;

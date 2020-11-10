@@ -6,10 +6,11 @@ import Contact from "./pages/contact.component";
 import NotFound from "./pages/notFound.component";
 import Portfolio from "./pages/portfolio.component";
 import Footer from "./components/footer.component";
+import styled from "styled-components";
 
 function App() {
   return (
-    <div className="App">
+    <AppDiv>
       <GlobalStyle />
 
       <Switch>
@@ -21,8 +22,12 @@ function App() {
         <Redirect to="/not-found" />
       </Switch>
       <Footer />
-    </div>
+    </AppDiv>
   );
 }
+
+const AppDiv = styled.div`
+  overflow: auto;
+`;
 
 export default App;

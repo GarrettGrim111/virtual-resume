@@ -41,7 +41,9 @@ const Portfolio = () => {
               rel="noreferrer"
               href="https://quest-journal.herokuapp.com/"
             >
-              <Image>Mni Picture + Link to hosted version</Image>
+              <Image>
+                <img src="./assets/log-icon.jpg" alt="" />
+              </Image>
               <HyperText>Link to hosted version</HyperText>
             </a>
             <a
@@ -82,11 +84,10 @@ const Portfolio = () => {
 
 // `;
 const Holder = styled.div`
- width: 100%;
+  width: 100%;
   margin-top: 50px;
 
   @media (max-width: 800px) {
-    
     margin-top: 90px;
   }
 
@@ -112,14 +113,10 @@ const Item = styled.div`
   flex-direction: column;
 `;
 
-const Top = styled.div`
-
-`;
+const Top = styled.div``;
 const Bottom = styled.div`
-
   display: flex;
   justify-content: space-around;
-
 
   @media (max-width: 750px) {
     display: unset;
@@ -129,7 +126,7 @@ const Bottom = styled.div`
 
 const Image = styled.div`
   img {
-    width: 150px;
+    width: 200px;
     height: 150px;
     object-fit: cover;
     border: 1px solid silver;

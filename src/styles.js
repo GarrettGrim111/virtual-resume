@@ -45,4 +45,5 @@ export const Header = styled.div`
   justify-content: center;
   align-items: center;
   position: absolute;
+  box-shadow: 0 0 8px 4px rgba(0, 140, 186, 0.7);
 `;
