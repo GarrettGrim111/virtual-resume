@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: flex;
+  justify-content: space-between;
   min-height: 100vh;
   width: 100%;
   margin: 0 auto;
   max-width: 1400px;
-  position: relative;
-  flex-direction: row;
+
+  flex-direction: column;
 
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
@@ -29,21 +30,7 @@ export const Title = styled.div`
 export const SubTitle = styled.div`
   font-size: 25px;
 `;
-// export const Text = styled.p`
-//   font-size: 15px;
-// `;
 
 export const Bold = styled.p`
   font-weight: bold;
-`;
-
-export const Header = styled.div`
-  background-color: #1c1c1c;
-  width: 400px;
-  height: 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  box-shadow: 0 0 8px 4px rgba(0, 140, 186, 0.7);
 `;

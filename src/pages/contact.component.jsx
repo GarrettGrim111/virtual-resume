@@ -1,16 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import Navigation from "./../components/navigation.component";
-import { Title, Header, Wrapper } from "../styles";
+
+import Header from "./../components/header.component";
 
 const Contact = () => {
   return (
-    <Wrapper>
-      <Navigation />
-      <Header>
-        <Title>Contact</Title>
-      </Header>
-      <Holder2>
+    <>
+      <Header title="Contact" />
+      <Container>
         <Holder>
           <Image src="./assets/profil.jpg" alt="" />
           <Info>
@@ -22,37 +19,28 @@ const Contact = () => {
             </a>
           </Info>
         </Holder>
-      </Holder2>
-    </Wrapper>
+      </Container>
+    </>
   );
 };
 
-// const Wrapper = styled.div`
-//   display: flex;
-//   flex-flow: column;
-//   min-height: 100vh;
-//   width: 100%;
-//   margin: 0 auto;
-//   flex-direction: row;
-// `;
 
-const Holder2 = styled.div`
-  position: absolute;
-  top: 60px;
-  bottom: 2.5rem;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+
+const Container = styled.div`
+  @media (max-width: 800px) {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 const Holder = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 500px) {
-    display: unset;
+  @media (max-width: 800px) {
+    display: block;
   }
 `;
 const Image = styled.img`

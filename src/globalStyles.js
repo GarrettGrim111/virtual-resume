@@ -13,24 +13,8 @@ export const GlobalStyle = createGlobalStyle`
 html { height: 100%; width: 100%;}
 
 body {
-  position: relative;
+  
   min-height: 100vh; 
-
-  
-    /* display: flex;
-    justify-content: center;
-  align-items: center;
-   overflow: scroll;   */
-  
-  /* padding: 20px 40px;
-  margin: 20px auto; */
-  
-    
-
-    /* @media (max-width: 800px)
-    {
-    padding: 10px } */
-    
     
     
 }`;

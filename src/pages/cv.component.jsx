@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Navigation from "./../components/navigation.component";
+
 import {
   FaGraduationCap,
   FaLanguage,
@@ -8,22 +8,18 @@ import {
   FaGamepad,
 } from "react-icons/fa";
 
-import { Wrapper, Header, Title, SubTitle, Bold } from "../styles";
+import { SubTitle, Bold } from "../styles";
 import { IconContext } from "react-icons";
+import Header from "../components/header.component";
 
 const CVPage = () => {
   return (
-    <Wrapper>
-      <Header>
-        <Title>CV</Title>
-      </Header>
-
-      <Navigation />
-
+    <>
+      <Header title="CV" />
       <Holder>
         <IconContext.Provider value={{ className: "react-icons" }}>
-          <UpperHolder>
-            <Education>
+          <ItemHolder>
+            <Item>
               <SubTitle>
                 Education Background
                 <FaGraduationCap />
@@ -41,9 +37,9 @@ const CVPage = () => {
               </Bold>{" "}
               Graduation from the economy, bookkeeping and computer science with
               a focus on graphics software.
-            </Education>
+            </Item>
 
-            <Languages>
+            <Item>
               <SubTitle>
                 Language Skills
                 <FaLanguage />
@@ -56,11 +52,11 @@ const CVPage = () => {
               Online Placement Test level C1)
               <br />
               <Bold>Russian</Bold> - Passive
-            </Languages>
-          </UpperHolder>
+            </Item>
+          </ItemHolder>
 
-          <LowerHolder>
-            <Tools>
+          <ItemHolder>
+            <Item>
               <SubTitle>
                 Tools
                 <FaTools />
@@ -73,8 +69,8 @@ const CVPage = () => {
               <br /> FireBase
               <br /> Figma for Design <br />
               Visual Studio GitHub <br /> Heroku
-            </Tools>
-            <Interests>
+            </Item>
+            <Item>
               {" "}
               <SubTitle>
                 Interests
@@ -87,99 +83,44 @@ const CVPage = () => {
               <br /> I like to cook (#kitchenAlchemy).
               <br /> Music from Rock, Metal to classical Jazz from 40s-60s and
               80s.
-            </Interests>
-          </LowerHolder>
+            </Item>
+          </ItemHolder>
         </IconContext.Provider>
       </Holder>
-    </Wrapper>
+    </>
   );
 };
 
-// const Wrapper = styled.div`
-//   /* display: flex;
-//   flex-flow: column;
-//   height: 100%;
-//   flex-wrap: wrap; */
-// `;
-
 const Holder = styled.div`
+  padding: 1rem;
+  height: 600px;
   width: 100%;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 50px;
-  
+
+  flex-direction: column;
+  justify-content: space-between;
+
   .react-icons {
     margin: 0 10px;
   }
 
-  @media (max-width: 800px) {
-    display: unset;
-    margin-top: 90px;
+  @media (max-width: 900px) {
+    height: auto;
   }
 `;
 
-const UpperHolder = styled.div`
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-`;
-const LowerHolder = styled.div`
-  width: 100%;
+const ItemHolder = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 `;
 
-const Education = styled.div`
-  position: relative;
-  flex: 1;
-  max-width: 400px;
-  height: 200px;
-  margin: 30px;
+const Item = styled.div`
+  width: 400px;
+  height: auto;
 
-  @media (max-width: 800px) {
-    flex: 100%;
-    max-width: 600px;
-  }
-`;
-
-const Languages = styled.div`
-  position: relative;
-  flex: 1;
-  max-width: 400px;
-  height: 200px;
-  margin: 30px;
-
-  @media (max-width: 800px) {
-    flex: 100%;
-    max-width: 600px;
-  }
-`;
-const Tools = styled.div`
-  position: relative;
-  flex: 1;
-  max-width: 400px;
-  height: 200px;
-  margin: 30px;
-
-  @media (max-width: 800px) {
-    flex: 100%;
-    max-width: 600px;
-  }
-`;
-
-const Interests = styled.div`
-  position: relative;
-  flex: 1;
-  max-width: 400px;
-  height: 200px;
-  margin: 30px;
-
-  @media (max-width: 800px) {
-    flex: 100%;
-    max-width: 600px;
+  @media (max-width: 900px) {
+    margin-bottom: 20px;
   }
 `;
 

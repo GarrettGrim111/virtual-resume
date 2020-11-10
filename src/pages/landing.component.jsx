@@ -8,70 +8,55 @@ import { Title, SubTitle } from "./../styles";
 
 const LandingPage = () => {
   return (
-    <Wrapper>
-      <Header>
-        <NameBox>
-          <h1>Garrett Grim</h1>
-          <h4>Front end Developer</h4>
-          <Link to="/contact" className="hyperlink">
-            Contact me
-          </Link>
-        </NameBox>
-        {/* <Holder> */}
-
-        <HeaderImage src="./assets/header-img.jpg" alt="" />
-        {/* </Holder> */}
-      </Header>
-
-      <Bottom>
-        <Holder>
-          <LinkContainer>
-            <Link to="/portfolio" className="link">
-              <Title>My work</Title>
-              <CgArrowDownO size="40px" color="#696969" />
+    
+      <Container>
+        <Header>
+          <NameBox>
+            <h1>Garrett Grim</h1>
+            <h4>Front end Developer</h4>
+            <Link to="/contact" className="hyperlink">
+              Contact me
             </Link>
-          </LinkContainer>
-        </Holder>
-        <ProfileHolder>
-          <SubTitle className="sub">About me</SubTitle>
-          <Profile>
-            My motto is "Play with the cards that life gives you" <br />I don't
-            consider myself an "adventurer" even though I was situated mostly
-            abroad. I lived and worked in England, Scotland, for a while in
-            Spain, but mainly in Denmark. I have worked with colleagues of
-            different faiths, cultures and nationalities and it has greatly
-            enriched me. For the last year, I have been very active in IT and I
-            have completed a number of courses and projects in this sector. I am
-            adaptable to the conditions and work with others.
-          </Profile>
-          <Link to="/cv" className="hyperlink">
-            More
-          </Link>
-        </ProfileHolder>
-      </Bottom>
-    </Wrapper>
+          </NameBox>
+         
+  
+          <HeaderImage src="./assets/header-img.jpg" alt="" />
+     
+        </Header>
+  
+        <Bottom>
+          <Holder>
+            <LinkContainer>
+              <Link to="/portfolio" className="link">
+                <Title>My work</Title>
+                <CgArrowDownO size="40px" color="#696969" />
+              </Link>
+            </LinkContainer>
+          </Holder>
+          <ProfileHolder>
+            <SubTitle className="sub">About me</SubTitle>
+            <Profile>
+              My motto is "Play with the cards that life gives you" <br />I don't
+              consider myself an "adventurer" even though I was situated mostly
+              abroad. I lived and worked in England, Scotland, for a while in
+              Spain, but mainly in Denmark. I have worked with colleagues of
+              different faiths, cultures and nationalities and it has greatly
+              enriched me. For the last year, I have been very active in IT and I
+              have completed a number of courses and projects in this sector. I am
+              adaptable to the conditions and work with others.
+            </Profile>
+            <Link to="/cv" className="hyperlink">
+              More
+            </Link>
+          </ProfileHolder>
+        </Bottom>
+     
+      </Container>
   );
 };
 
-const Wrapper = styled.div`
-display: flex;
-flex-direction: column;
-  min-height: 100vh;
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1400px;
-  position: relative;
-  background-color: lightgray;
+const Container = styled.div`
 
-  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
-    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-    0 100px 80px rgba(0, 0, 0, 0.12);
-  /*
-  //tablet styles
-  @media (max-width: 1000px) {
-    flex-direction: column;
-  } */
 
   .hyperlink {
     text-decoration: none;
@@ -100,7 +85,7 @@ const Header = styled.div`
 
 const Bottom = styled.div`
   display: flex;
-  /* flex-wrap: wrap; */
+
   @media (max-width: 900px) {
     display: block;
   }

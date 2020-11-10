@@ -1,15 +1,13 @@
 import React from "react";
 import styled from "styled-components";
-import Navigation from "../components/navigation.component";
-import { Title, Header, Wrapper } from "../styles";
+import Header from "../components/header.component";
 
 const Portfolio = () => {
   return (
-    <Wrapper>
-      <Navigation />
-      <Header>
-        <Title>From my work</Title>
-      </Header>
+    <>
+      
+      <Header title="From my work"/>
+       
       <Holder>
         <Top>
           <Item>
@@ -76,19 +74,16 @@ const Portfolio = () => {
           </Item>
         </Bottom>
       </Holder>
-    </Wrapper>
+    </>
   );
 };
 
-// const Wrapper = styled.div`
-
-// `;
 const Holder = styled.div`
   width: 100%;
-  margin-top: 50px;
+  margin-top: 20px;
 
   @media (max-width: 800px) {
-    margin-top: 90px;
+    margin-top: unset;
   }
 
   a {
