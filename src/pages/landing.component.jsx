@@ -8,56 +8,50 @@ import { Title, SubTitle } from "./../styles";
 
 const LandingPage = () => {
   return (
-    
-      <Container>
-        <Header>
-          <NameBox>
-            <h1>Garrett Grim</h1>
-            <h4>Front end Developer</h4>
-            <Link to="/contact" className="hyperlink">
-              Contact me
+    <Container>
+      <Header>
+        <NameBox>
+          <h1>Garrett Grim</h1>
+          <h4>Front end Developer</h4>
+          <Link to="/contact" className="hyperlink">
+            Contact me
+          </Link>
+        </NameBox>
+
+        <HeaderImage src="./assets/header-img.jpg" alt="" />
+      </Header>
+
+      <Bottom>
+        <Holder>
+          <LinkContainer>
+            <Link to="/portfolio" className="link">
+              <Title>My work</Title>
+              <CgArrowDownO size="40px" color="#696969" />
             </Link>
-          </NameBox>
-         
-  
-          <HeaderImage src="./assets/header-img.jpg" alt="" />
-     
-        </Header>
-  
-        <Bottom>
-          <Holder>
-            <LinkContainer>
-              <Link to="/portfolio" className="link">
-                <Title>My work</Title>
-                <CgArrowDownO size="40px" color="#696969" />
-              </Link>
-            </LinkContainer>
-          </Holder>
-          <ProfileHolder>
-            <SubTitle className="sub">About me</SubTitle>
-            <Profile>
-              My motto is "Play with the cards that life gives you" <br />I don't
-              consider myself an "adventurer" even though I was situated mostly
-              abroad. I lived and worked in England, Scotland, for a while in
-              Spain, but mainly in Denmark. I have worked with colleagues of
-              different faiths, cultures and nationalities and it has greatly
-              enriched me. For the last year, I have been very active in IT and I
-              have completed a number of courses and projects in this sector. I am
-              adaptable to the conditions and work with others.
-            </Profile>
-            <Link to="/cv" className="hyperlink">
-              More
-            </Link>
-          </ProfileHolder>
-        </Bottom>
-     
-      </Container>
+          </LinkContainer>
+        </Holder>
+        <ProfileHolder>
+          <SubTitle className="sub">About me</SubTitle>
+          <Profile>
+            My motto is "Play with the cards that life gives you" <br />I don't
+            consider myself an "adventurer" even though I was situated mostly
+            abroad. I lived and worked in England, Scotland, for a while in
+            Spain, but mainly in Denmark. I have worked with colleagues of
+            different faiths, cultures and nationalities and it has greatly
+            enriched me. For the last year, I have been very active in IT and I
+            have completed a number of courses and projects in this sector. I am
+            adaptable to the conditions and work with others.
+          </Profile>
+          <Link to="/cv" className="hyperlink">
+            More
+          </Link>
+        </ProfileHolder>
+      </Bottom>
+    </Container>
   );
 };
 
 const Container = styled.div`
-
-
   .hyperlink {
     text-decoration: none;
     color: white;
@@ -72,6 +66,9 @@ const Container = styled.div`
     margin: 20px 0;
     width: 150px;
     text-align: center;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   }
 `;
 const Header = styled.div`
@@ -85,6 +82,9 @@ const Header = styled.div`
 
 const Bottom = styled.div`
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 530px;
 
   @media (max-width: 900px) {
     display: block;
@@ -120,6 +120,14 @@ const HeaderImage = styled.img`
   object-fit: cover;
   -webkit-box-shadow: 0px 12px 15px 12px rgba(0, 0, 0, 0.48);
   box-shadow: 0px 12px 15px 12px rgba(0, 0, 0, 0.48);
+
+  /* 
+  width: 50%;
+  height: 150%;
+  background-image: url("./assets/header-img.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 95%; */
 `;
 
 const NameBox = styled.div`
@@ -133,11 +141,11 @@ const NameBox = styled.div`
 `;
 
 const ProfileHolder = styled.div`
-  position: absolute;
+  /* position: absolute;
   right: 15px;
-  bottom: 50px;
-  width: 55%;
-  height: 250px;
+  bottom: 50px; */
+  width: 100vh;
+  /* height: 250px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -169,7 +177,7 @@ const ProfileHolder = styled.div`
       margin: 20px;
     }
     .hyperlink {
-    margin-bottom: 30px;
+      margin-bottom: 30px;
     }
   }
 `;

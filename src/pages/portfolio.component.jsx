@@ -5,9 +5,8 @@ import Header from "../components/header.component";
 const Portfolio = () => {
   return (
     <>
-      
-      <Header title="From my work"/>
-       
+      <Header title="From my work" />
+
       <Holder>
         <Top>
           <Item>
@@ -143,6 +142,18 @@ const HyperText = styled.span`
 
   padding: 5px;
   cursor: pointer;
+
+  :hover {
+    background-color: #1c1c1c;
+    padding: 10px;
+    color: white;
+    /* transition-delay: 0.5s; */
+    opacity: 1;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export default Portfolio;
