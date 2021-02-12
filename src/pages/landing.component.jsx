@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import header from "../images/header.jpg";
 
 import { CgArrowDownO } from "react-icons/cg";
 
@@ -18,7 +19,7 @@ const LandingPage = () => {
           </Link>
         </NameBox>
 
-        <HeaderImage src="./assets/header-img.jpg" alt="" />
+        <HeaderImage src={header} alt="" />
       </Header>
 
       <Bottom>
@@ -84,7 +85,7 @@ const Bottom = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 530px;
+  height: 540px;
 
   @media (max-width: 900px) {
     display: block;
@@ -120,14 +121,6 @@ const HeaderImage = styled.img`
   object-fit: cover;
   -webkit-box-shadow: 0px 12px 15px 12px rgba(0, 0, 0, 0.48);
   box-shadow: 0px 12px 15px 12px rgba(0, 0, 0, 0.48);
-
-  /* 
-  width: 50%;
-  height: 150%;
-  background-image: url("./assets/header-img.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: 95%; */
 `;
 
 const NameBox = styled.div`
@@ -141,11 +134,7 @@ const NameBox = styled.div`
 `;
 
 const ProfileHolder = styled.div`
-  /* position: absolute;
-  right: 15px;
-  bottom: 50px; */
   width: 100vh;
-  /* height: 250px; */
   display: flex;
   justify-content: center;
   align-items: center;

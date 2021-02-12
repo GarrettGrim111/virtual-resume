@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import profil  from "../images/profil.jpg";
 
 import Header from "./../components/header.component";
 
@@ -9,11 +10,11 @@ const Contact = () => {
       <Header title="Contact" />
       <Container>
         <Holder>
-          <Image src="./assets/profil.jpg" alt="" />
+          <Image src={profil} alt="" />
           <Info>
             Nationality: Czech <br />
-            Telephone: +420 730625 755 <br />
-            Email:{" "}
+            Telephone: +420 730 625 755 <br />
+            Email:
             <a href="mailto:garrett.grim111@gmail.com">
               garrett.grim111@gmail.com
             </a>
@@ -23,8 +24,6 @@ const Contact = () => {
     </>
   );
 };
-
-
 
 const Container = styled.div`
   @media (max-width: 800px) {
@@ -45,7 +44,7 @@ const Holder = styled.div`
 `;
 const Image = styled.img`
   width: 200px;
-  height: auto;
+  height: 250px;
   margin: 0 15px;
   object-fit: cover;
   -webkit-box-shadow: 0px 2px 20px 12px rgba(0, 0, 0, 0.3);

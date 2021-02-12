@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import Header from "../components/header.component";
+import Item from "../components/item.component";
+import eshop from "../images/eshop.jpg";
+import handcraft from "../images/handcraft.jpg";
+import log from "../images/log.jpg";
 
 const Portfolio = () => {
   return (
@@ -9,68 +13,26 @@ const Portfolio = () => {
 
       <Holder>
         <Top>
-          <Item>
-            <Name>eshop-project</Name>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://eshop-project-live.herokuapp.com/"
-            >
-              <Image>
-                <img src="./assets/icon2.jpg" alt="" />
-              </Image>
-              <HyperText>Link to hosted version</HyperText>
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/GarrettGrim111/eshop-project.git"
-            >
-              <HyperText>Link to Git version</HyperText>
-            </a>
-          </Item>
+          <Item
+            name="eshop-project"
+            liveLink="https://eshop-project-live.herokuapp.com/"
+            gitLink="https://github.com/GarrettGrim111/eshop-project.git"
+            img={eshop}
+          />
         </Top>
         <Bottom>
-          <Item>
-            <Name>Quest Log</Name>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://quest-journal.herokuapp.com/"
-            >
-              <Image>
-                <img src="./assets/log-icon.jpg" alt="" />
-              </Image>
-              <HyperText>Link to hosted version</HyperText>
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/GarrettGrim111/Quest-Log.git"
-            >
-              <HyperText>Link to Git version</HyperText>
-            </a>
-          </Item>
-          <Item>
-            <Name>Builds of Skyrim</Name>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://builds-of-skyrim.herokuapp.com/"
-            >
-              <Image>
-                <img src="./assets/icon1.jpg" alt="" />
-              </Image>
-              <HyperText>Link to hosted version</HyperText>
-            </a>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href="https://github.com/GarrettGrim111/builds.git"
-            >
-              <HyperText>Link to Git version</HyperText>
-            </a>
-          </Item>
+          <Item
+            name="Quest Log"
+            liveLink="https://quest-journal.herokuapp.com/"
+            gitLink="https://github.com/GarrettGrim111/Quest-Log.git"
+            img={log}
+          />
+          <Item
+            name="Handcrafts"
+            liveLink="https://handcrafts.vercel.app/"
+            gitLink="https://github.com/GarrettGrim111/handcrafts.git"
+            img={handcraft}
+          />
         </Bottom>
       </Holder>
     </>
@@ -94,19 +56,6 @@ const Holder = styled.div`
   }
 `;
 
-const Name = styled.span`
-  margin: 10px 0;
-  font-weight: bold;
-`;
-
-const Item = styled.div`
-  margin: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-`;
-
 const Top = styled.div``;
 const Bottom = styled.div`
   display: flex;
@@ -115,44 +64,6 @@ const Bottom = styled.div`
   @media (max-width: 750px) {
     display: unset;
     min-height: 100%;
-  }
-`;
-
-const Image = styled.div`
-  img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border: 1px solid silver;
-    padding: 5px;
-  }
-
-  img:hover {
-    box-shadow: 0 0 4px 2px rgba(0, 140, 186, 0.5);
-  }
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-`;
-const HyperText = styled.span`
-  font-size: 18px;
-  color: black;
-
-  padding: 5px;
-  cursor: pointer;
-
-  :hover {
-    background-color: #1c1c1c;
-    padding: 10px;
-    color: white;
-    /* transition-delay: 0.5s; */
-    opacity: 1;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
   }
 `;
 
